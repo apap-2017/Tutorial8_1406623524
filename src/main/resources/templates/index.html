@@ -1,0 +1,12 @@
+<html xmlns:th = "http://www.thymeleaf.org" >
+<head>
+<title>Index</title>
+</head>
+<body>
+	<h2>Welcome to APAP Tutorial 8</h2>
+	<a href="/login"> Login </a>
+	<p>
+	<a th:if = "${#httpServletRequest.isUserInRole('ADMIN')}" href = "/course/viewall" > ViewAll Course </a><br/>
+	<a th:if = "${#httpServletRequest.isUserInRole('USER')}" href = "/student/viewall" > ViewAll Student </a><br/></p>
+</body>
+</html>
